@@ -23,16 +23,10 @@ public class ValidacionArchivo {
 		errores = new ArrayList();
 	}
 	
-	public static void obtenerFecha(String fechaInicial, String fechaFinal, String rutaArchivo) {
-		try {
-			fachadaGranReto.cargarArchivo1(rutaArchivo);
-			
-		} catch (GranRetoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+	public String obtenerRutaArhivo(String rutaArchivo) {
+		return rutaArchivo;
 	}
+	
 	
 	public static List<String> obtenerDatosFecha(String rutaArchivo, List<String> fechas) throws GranRetoException{
 		fechas=new ArrayList();

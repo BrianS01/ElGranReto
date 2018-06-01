@@ -52,13 +52,21 @@ public class FachadaGranReto implements IFachadaGranReto{
 			FachadaGranReto ifg = new FachadaGranReto();
 			try {
 				ifg.cargarArchivo("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
+				
 			} catch (GranRetoException e) {
 				System.out.println("GranRetoException:"+e.getMessage());
 			}
 	}
 	
 	public List<String> obtenerArticulosMasVendidos(String fechaInicial, String fechaFinal) throws GranRetoException {
-		// TODO Auto-generated method stub
+		FachadaGranReto ifg = new FachadaGranReto();
+	
+		try {
+         // validacionArchivo.obtenerRutaArhivo(rutaArchivo);	
+		//	validacionArchivo.obtenerDatosFecha(rutaArchivo, fechas)
+		} catch (Exception e) {
+			System.out.println("GranRetoException:"+e.getMessage());
+		}
 		return null;
 	}
 
