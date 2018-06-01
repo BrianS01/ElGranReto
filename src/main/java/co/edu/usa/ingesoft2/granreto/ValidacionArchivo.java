@@ -112,7 +112,9 @@ public class ValidacionArchivo
 		}
 	}
 
-	public void validarArchivoVacio(boolean estaLleno) {
+	
+	public void validarArchivoVacio(boolean estaLleno)
+	{
 
 		if (!estaLleno) {
 			errores.add("El archivo no puede estar vacio");
