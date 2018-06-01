@@ -216,6 +216,7 @@ public class ValidacionArchivo
 		return nombreProducto.trim().toUpperCase();
 	}
 
+	
 	public void recorrerArchivo() throws IOException
 	{
 		String linea = "";
@@ -226,17 +227,13 @@ public class ValidacionArchivo
 			tipoLinea = validarTipoDeEntrada(linea);
 			switch (tipoLinea)
 			{
-			case 1:
-				validacionesFecha(linea);
+				case 1: validacionesFecha(linea);
 				break;
-			case 2:
-				validacionesNombreProducto(linea);
+				case 2: validacionesNombreProducto(linea);
 				break;
-			case 3:
-				validacionesCantidad(linea);
+				case 3: validacionesCantidad(linea);
 				break;
-			default:
-				continue;
+				default: continue;
 			}
 		}
 	}
