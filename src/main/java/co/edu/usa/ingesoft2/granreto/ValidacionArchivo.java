@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +23,8 @@ public class ValidacionArchivo {
 		this.br = br;
 		errores = new ArrayList();
 	}
-	
+
+
 	public String obtenerRutaArhivo(String rutaArchivo) {
 		return rutaArchivo;
 	}
@@ -47,7 +49,9 @@ public class ValidacionArchivo {
 	}
 	
 	public void obtenerFechaInicialFinal(String rutaArchivo, List<String> fechas) {
-		try {
+		//String primeraFecha = Collections.min(fechas);
+		//return primeraFecha;
+		/*try {
 			obtenerDatosFecha(rutaArchivo, fechas);
 			for (int i = 0; i < fechas.size(); i++) {
 				String a=fechas.get(i);
@@ -61,7 +65,7 @@ public class ValidacionArchivo {
 		} catch (GranRetoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 	
