@@ -142,11 +142,13 @@ public class ValidacionArchivo
 		
 	}
 
-	public void validarSoloUnEspacioFechaHora(String fechaHora) {
+	public void validarSoloUnEspacioFechaHora(String fechaHora)
+	{
 		String[] elementos = fechaHora.trim().split(" ");
 		int cantidadElementos = elementos.length;
 
-		if (cantidadElementos != 2) {
+		if (cantidadElementos != 2)
+		{
 			errores.add("Cantidad de espacios internos de la fecha " + fechaHora + " son incorrectos");
 		}
 	}
