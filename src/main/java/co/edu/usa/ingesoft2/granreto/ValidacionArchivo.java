@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,32 +29,51 @@ public class ValidacionArchivo {
 	}
 	
 	
-	public static List<String> obtenerDatosFecha(String rutaArchivo, List<String> fechas) throws GranRetoException{
+	public static List<String> obtenerDatosFecha(String rutaArchivo) throws GranRetoException
+	{
+		List<String> fechas;
 		fechas=new ArrayList();
-		String fechaHora="";
 		String datosArchivo=fachadaGranReto.cargarArchivo1(rutaArchivo);
+		int j= 0;
+		for (int i = 0; i < datosArchivo.length(); i++)
+		{
+			j = i+2;
+			fechas.add(datosArchivo);
+		}
+		/*
+		 * //String fechaHora="2010/05/20 20:05";
+		String datosArchivo=fachadaGranReto.cargarArchivo1(rutaArchivo);
+		//datosArchivo.getFechas();
 		boolean encontroFecha=false;
+		
 		for (int i = 0; i < datosArchivo.length(); i++) {
-			if(datosArchivo!=null) {
-			fechas.add(validarFecha1(fechaHora));
+			if(datosArchivo!=null ) {
+				fechas.add("algo");
+			//fechas.add(validarFecha1(fechaHora));
 			encontroFecha=true;
 			}
 			else {
 				encontroFecha=false;
 				System.out.println("No se encontraron fechas");
 			}
-		}
+		}*/
 		return fechas;
 	}
 	
-	public void obtenerFechaInicialFinal(String rutaArchivo, List<String> fechas) {
+	public void obtenerFechaInicialFinal(List<String> fechas) {
+		/*int barraDeDividir;
 		try {
+			List listado = obtenerDatosFecha(null, listado);
 			obtenerDatosFecha(rutaArchivo, fechas);
 			for (int i = 0; i < fechas.size(); i++) {
 				String a=fechas.get(i);
 				String b=fechas.get(i+1);
+				barraDeDividir = fechas.get(i).codePointAt(47);
 				
-				if(a.codePointAt(i)==47); //corresponde a /
+				if(fechas.get(i).equals(barraDeDividir)==47) {
+					
+				}
+					//corresponde a /
 				
 				//fechas.get(i).compareTo(fechas.get(i+1));
 				i++;
@@ -62,7 +82,7 @@ public class ValidacionArchivo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		*/
 	}
 	
 	public void guardarCambiosArchivos(String rutaArchivo) {
@@ -138,21 +158,31 @@ public class ValidacionArchivo {
 
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws GranRetoException {
 		FachadaGranReto ifg = new FachadaGranReto();
 		List <String> fechas=new ArrayList();
 		
 		
 		fechas.add("2010/05/25 20:05");
 		fechas.add("2011/08/30 16:03");
-		try {
+		
+		String rutaArchivo=ifg.cargarArchivo1("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
+		//obtenerDatosFecha(rutaArchivo, fechas);
+		System.out.println("que es esto");
+		String datosArchivo=fachadaGranReto.cargarArchivo1(rutaArchivo);
+		System.out.println("esto se acabo");
+		
+		/*try {
 			String rutaArchivo=ifg.cargarArchivo1("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
-			obtenerDatosFecha(rutaArchivo, fechas);
+			//obtenerDatosFecha(rutaArchivo, fechas);
+			
+			System.out.println("oe estoy aqui");
+			System.out.println(obtenerDatosFecha(rutaArchivo));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Algo salio mal");
-		}
+		}*/
 		
 		
 	}
@@ -181,17 +211,18 @@ public class ValidacionArchivo {
 
 	}
 	
-	public static String validarFecha1(String fechaHora) {
+	public static String validarFecha1(String fechaHora){
+		String fecha = "";
 		try {
 			SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 			formato.setLenient(false);
 			Date fechaParseasa = formato.parse(fechaHora);
-			String fecha = formato.format(fechaParseasa);
-			
+			fecha = formato.format(fechaParseasa);
+			return fecha;
 		} catch (Exception e) {
 			errores.add("Formato de fecha incorrecto " + fechaHora + " debe ser yyyy/MM/dd HH:mm");
 		}
-		return fechaHora;
+		return fecha;
 	}
 
 	public String obtenerResultadoValidacion() throws GranRetoException {
