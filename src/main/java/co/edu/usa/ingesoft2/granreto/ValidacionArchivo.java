@@ -62,17 +62,17 @@ public class ValidacionArchivo {
 		return fechas;
 	}
 	
-<<<<<<< HEAD
+
 	public void obtenerFechaInicialFinal(String rutaArchivo, List<String> fechas) {
 		//String primeraFecha = Collections.min(fechas);
 		//return primeraFecha;
 		/*try {
-=======
+
 	public void obtenerFechaInicialFinal(List<String> fechas) {
-		/*int barraDeDividir;
+		int barraDeDividir;
 		try {
 			List listado = obtenerDatosFecha(null, listado);
->>>>>>> 42fb3efb8a2e1b18b25f91a44a894e575f62dc0d
+
 			obtenerDatosFecha(rutaArchivo, fechas);
 			for (int i = 0; i < fechas.size(); i++) {
 				String a=fechas.get(i);
@@ -90,13 +90,13 @@ public class ValidacionArchivo {
 		} catch (GranRetoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-<<<<<<< HEAD
-		}*/
-		
-=======
+
 		}
-		*/
->>>>>>> 42fb3efb8a2e1b18b25f91a44a894e575f62dc0d
+		
+		
+
+		}*/
+
 	}
 	
 	public void guardarCambiosArchivos(String rutaArchivo) {
