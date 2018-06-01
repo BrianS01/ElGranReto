@@ -216,12 +216,16 @@ public class ValidacionArchivo
 		return nombreProducto.trim().toUpperCase();
 	}
 
-	public void recorrerArchivo() throws IOException {
+	public void recorrerArchivo() throws IOException
+	{
 		String linea = "";
 		int tipoLinea = 0;
-		while ((linea = br.readLine()) != null) {
+		
+		while ((linea = br.readLine()) != null)
+		{
 			tipoLinea = validarTipoDeEntrada(linea);
-			switch (tipoLinea) {
+			switch (tipoLinea)
+			{
 			case 1:
 				validacionesFecha(linea);
 				break;
