@@ -12,6 +12,7 @@ import java.util.List;
 
 public class ValidacionArchivo {
 
+
 	private BufferedReader br;
 	private List<String> errores;
 	private int tipoDeLinea;
@@ -34,7 +35,6 @@ public class ValidacionArchivo {
 		return rutaArchivo;
 	}
 	
-
 	
 	public void guardarCambiosArchivos(String rutaArchivo) {
 		File archivo = new File(rutaArchivo);
@@ -48,8 +48,6 @@ public class ValidacionArchivo {
 				}
 				else {
 					br = new BufferedReader(new FileReader(archivo));
-					System.out.println("El archivo es nuevo y no había sido "
-							+ "creado antes");
 				}
 			} catch (IOException e) {
 				errores.add("Se presento un error al cargar el archivo");
@@ -58,15 +56,13 @@ public class ValidacionArchivo {
 		}
 	
 	
-	public String validarNombreProducto(String nombreProducto) {
-		validarCaracteresNombreProducto(nombreProducto);
-		System.out.println(nombreProducto);
-		
+	public String validarNombreProducto(String nombreProducto) throws GranRetoException {
+		validarCaracteresNombreProducto(nombreProducto);		
 		return nombreProducto;
 	}
 	
 	
-	public void ejecutarValidaciones() throws ParseException {
+	public void ejecutarValidaciones() throws ParseException, GranRetoException {
 		try {
 			validarArchivoVacio(br.ready());
 			recorrerArchivo();
@@ -83,11 +79,6 @@ public class ValidacionArchivo {
 
 	}
 	
-	public static void main(String[] args) throws GranRetoException {
-		
-		System.out.println("2012/04/04".substring(0,10));
-	}
-
 	public void validarSoloUnEspacioFechaHora(String fechaHora) {
 		String[] elementos = fechaHora.trim().split(" ");
 		int cantidadElementos = elementos.length;
@@ -127,13 +118,21 @@ public class ValidacionArchivo {
 	}
 
 	public String normalizarNombreProducto(String nombreProducto) {
-		return nombreProducto.trim().toUpperCase();
+		String nombreNormalizado = nombreProducto.trim().toUpperCase();
+		return nombreNormalizado;
+	}
+	
+	public void SinDobleEspaciosNombreProducto(String nombreProducto) throws GranRetoException {
+		String nombreNormalizado =normalizarNombreProducto(nombreProducto);
+		if(nombreNormalizado.contains("  ")){
+			throw new GranRetoException();
+		}
 	}
 	
 	
 	
 //Filtrar los productos cuya fecha este entre los rangos que estén entre dos fechas. 
-	public void recorrerArchivo() throws IOException, ParseException {
+	public void recorrerArchivo() throws IOException, ParseException, GranRetoException {
 		Producto producto=new Producto();
 		String linea = "";
 		int tipoLinea = 0;
@@ -151,7 +150,10 @@ public class ValidacionArchivo {
 			case 3:
 				validacionesCantidad(linea);
 				producto.setCantidad(linea);//al producto le agrego la cantidad
-				productos.add(producto);
+				if(producto!=null && producto.getCantidad()!=null && producto.getFecha()!=null && producto.getNombreProducto()!=null) {
+					productos.add(producto);
+				}
+				
 				producto = new Producto();
 				break;
 			default:
@@ -165,9 +167,9 @@ public class ValidacionArchivo {
 		validarSoloUnEspacioFechaHora(linea);
 	}
 
-	public void validacionesNombreProducto(String linea) {
-		linea = normalizarNombreProducto(linea);
-		System.out.println(linea);
+	public void validacionesNombreProducto(String linea) throws GranRetoException {
+		SinDobleEspaciosNombreProducto(linea);
+		validarNombreProducto(linea);
 	}
 	
 	public void validacionesCantidad(String linea) {
@@ -241,24 +243,28 @@ public class ValidacionArchivo {
 	// Estos nombres admiten letras, números, apóstrofes, guiones y paréntesis.
 	
 	
-	public void validarCaracteresNombreProducto(String linea) {
+	public void validarCaracteresNombreProducto(String linea) throws GranRetoException {
 		int rangoCaracteres;
 		try {
 			for (int i = 0; i < linea.length(); i++) {
 				rangoCaracteres = linea.codePointAt(i);
 				
-				if (!((rangoCaracteres >= 97 && rangoCaracteres <= 122)
-						|| (rangoCaracteres >= 48 && rangoCaracteres <= 57) ||
-						(rangoCaracteres>=65 && rangoCaracteres<=90)|| rangoCaracteres == 39
-						|| rangoCaracteres == 95 || rangoCaracteres == 45 || rangoCaracteres == 40
-						|| rangoCaracteres == 41 || rangoCaracteres == 91 || rangoCaracteres == 93)) { 
-					errores.add("el nombre del producto " + linea + " no esta escrito correctamente");
-					break;
+				if (!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
+						!(rangoCaracteres>=97 && rangoCaracteres<=122) &&
+						!(rangoCaracteres>=48 && rangoCaracteres<=57) && 
+						!(rangoCaracteres==45) &&
+						!(rangoCaracteres>=40 && rangoCaracteres<=41) &&
+						!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
+						!(rangoCaracteres==39) ) { 
+					throw new GranRetoException();
+				//	errores.add("el nombre del producto " + linea + " no esta escrito correctamente");
+				//	break;
 				}
 			}
 
 		} catch (Exception e) {
 			errores.add("Nombre del producto incorrecto" + linea);
+			throw new GranRetoException();
 		}
 		
 		
@@ -283,6 +289,5 @@ public class ValidacionArchivo {
 		fecha+=dia.format(fechaHora);
 		return fecha;
 	}
-	
 	
 }
