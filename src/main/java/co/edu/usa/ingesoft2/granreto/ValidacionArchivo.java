@@ -165,11 +165,10 @@ public class ValidacionArchivo
 			Date fechaParseasa = formato.parse(fechaHora);
 			String fecha = formato.format(fechaParseasa);
 		}
-
-		catch (Exception e) {
+		catch (Exception e)
+		{
 			errores.add("Formato de fecha incorrecto " + fechaHora + " debe ser yyyy/MM/dd HH:mm");
-		}		
-
+		}
 	}
 	
 	public static String validarFecha1(String fechaHora) {
