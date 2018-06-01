@@ -119,8 +119,8 @@ public class ValidacionArchivo
 		{
 			errores.add("El archivo no puede estar vacio");
 		}
-
 	}
+	
 	
 	public static void main(String[] args) {
 		FachadaGranReto ifg = new FachadaGranReto();
