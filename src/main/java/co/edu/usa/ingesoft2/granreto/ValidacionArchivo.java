@@ -171,14 +171,17 @@ public class ValidacionArchivo
 		}
 	}
 	
-	public static String validarFecha1(String fechaHora) {
-		try {
+	
+	public static String validarFecha1(String fechaHora)
+	{
+		try
+		{
 			SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 			formato.setLenient(false);
 			Date fechaParseasa = formato.parse(fechaHora);
 			String fecha = formato.format(fechaParseasa);
-			
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			errores.add("Formato de fecha incorrecto " + fechaHora + " debe ser yyyy/MM/dd HH:mm");
 		}
 		return fechaHora;
