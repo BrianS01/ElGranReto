@@ -189,11 +189,16 @@ public class ValidacionArchivo
 		return fechaHora;
 	}
 
-	public String obtenerResultadoValidacion() throws GranRetoException {
+	public String obtenerResultadoValidacion() throws GranRetoException
+	{
 		String mensaje = "\n";
-		if (errores.size() == 0) {
+		
+		if (errores.size() == 0)
+		{
 			mensaje = "No se presentaron errores";
-		} else {
+		}
+		else
+		{
 			for (String error : errores) {
 				mensaje += error + "\n";
 			}
