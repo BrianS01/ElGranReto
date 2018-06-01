@@ -7,49 +7,60 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ValidacionArchivo {
-
+public class ValidacionArchivo
+{
 	private BufferedReader br;
 	private static List<String> errores;
 	private int tipoDeLinea;
 	static FachadaGranReto fachadaGranReto=new FachadaGranReto();
 	
-	public ValidacionArchivo(BufferedReader br) {
+	public ValidacionArchivo(BufferedReader br)
+	{
 		this.br = br;
 		errores = new ArrayList();
 	}
 	
-	public static void obtenerFecha(String fechaInicial, String fechaFinal, String rutaArchivo) {
-		try {
+	
+	public static void obtenerFecha(String fechaInicial, String fechaFinal, String rutaArchivo)
+	{
+		try
+		{
 			fachadaGranReto.cargarArchivo1(rutaArchivo);
-			
-		} catch (GranRetoException e) {
+		}
+		catch (GranRetoException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 	
-	public static List<String> obtenerDatosFecha(String rutaArchivo, String fechaHora, List<String> fechas) throws GranRetoException{
+	
+	public static List<String> obtenerDatosFecha(String rutaArchivo, String fechaHora, List<String> fechas) throws GranRetoException
+	{
 		fechas=new ArrayList();
 		String datosArchivo=fachadaGranReto.cargarArchivo1(rutaArchivo);
 		boolean encontroFecha=false;
-		for (int i = 0; i < datosArchivo.length(); i++) {
-			if(datosArchivo!=null) {
-			fechas.add(validarFecha1(fechaHora));
-			encontroFecha=true;
+		
+		for (int i = 0; i < datosArchivo.length(); i++)
+		{
+			if(datosArchivo!=null)
+			{
+				fechas.add(validarFecha1(fechaHora));
+				encontroFecha=true;
 			}
-			else {
+			else
+			{
 				encontroFecha=false;
 				System.out.println("No se encontraron fechas");
 			}
 		}
+		
 		return fechas;
 	}
 	
 	
-	
-	public static List<String> guardarDatosNombreProducto(String rutaArchivo, String nombreProducto, List<String> nombres) throws GranRetoException {
+	public static List<String> guardarDatosNombreProducto(String rutaArchivo, String nombreProducto, List<String> nombres) throws GranRetoException
+	{
 		nombres=new ArrayList();
 		fachadaGranReto.cargarArchivo1(rutaArchivo);
 		String nombreProducto1=validarNombreProducto(nombreProducto);
@@ -58,15 +69,18 @@ public class ValidacionArchivo {
 		return nombres;
 	}
 	
+	
 	//Método Sterling
-	public List<String> buscarRegistros(String nombreArticulo, String fechaHora, String cantidadVentas) {
-		
+	public List<String> buscarRegistros(String nombreArticulo, String fechaHora, String cantidadVentas)
+	{
 		//validacionesNombreProducto   este método está bien
 		//guardarDatosNombreProducto
 		return null;
 	}
 	
-	public static List<String> guardarDatosCantidadProducto(String rutaArchivo, String cantidadProducto,List<String> cantidad) throws GranRetoException {
+	
+	public static List<String> guardarDatosCantidadProducto(String rutaArchivo, String cantidadProducto,List<String> cantidad) throws GranRetoException
+	{
 		cantidad= new ArrayList();
 		fachadaGranReto.cargarArchivo1(rutaArchivo);
 		String cantidadProducto1=validacionesCantidad1(cantidadProducto);
@@ -75,7 +89,9 @@ public class ValidacionArchivo {
 		return cantidad;
 	}
 	
-	public static String validarNombreProducto(String nombreProducto) {
+	
+	public static String validarNombreProducto(String nombreProducto)
+	{
 		validarCaracteresNombreProducto(nombreProducto);
 		System.out.println(nombreProducto);
 		
@@ -83,11 +99,15 @@ public class ValidacionArchivo {
 	}
 	
 	
-	public void ejecutarValidaciones() {
-		try {
+	public void ejecutarValidaciones()
+	{
+		try
+		{
 			validarArchivoVacio(br.ready());
 			recorrerArchivo();
-		} catch (IOException e) {
+		}
+		catch (IOException e)
+		{
 			errores.add("Se presento un error al cargar el archivo");
 		}
 	}
