@@ -199,15 +199,20 @@ public class ValidacionArchivo
 		}
 		else
 		{
-			for (String error : errores) {
+			for (String error : errores)
+			{
 				mensaje += error + "\n";
 			}
+			
 			throw new GranRetoException(mensaje);
 		}
+		
 		return mensaje;
 	}
+	
 
-	public String normalizarNombreProducto(String nombreProducto) {
+	public String normalizarNombreProducto(String nombreProducto)
+	{
 		return nombreProducto.trim().toUpperCase();
 	}
 
