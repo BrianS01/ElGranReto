@@ -62,8 +62,7 @@ public class FachadaGranReto implements IFachadaGranReto{
 		FachadaGranReto ifg = new FachadaGranReto();
 	
 		try {
-         // validacionArchivo.obtenerRutaArhivo(rutaArchivo);	
-		//	validacionArchivo.obtenerDatosFecha(rutaArchivo, fechas)
+         
 		} catch (Exception e) {
 			System.out.println("GranRetoException:"+e.getMessage());
 		}
