@@ -1,6 +1,10 @@
 package co.edu.usa.ingesoft2.granreto;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,8 +34,9 @@ public class ValidacionArchivo {
 		
 	}
 	
-	public static List<String> obtenerDatosFecha(String rutaArchivo, String fechaHora, List<String> fechas) throws GranRetoException{
+	public static List<String> obtenerDatosFecha(String rutaArchivo, List<String> fechas) throws GranRetoException{
 		fechas=new ArrayList();
+		String fechaHora="";
 		String datosArchivo=fachadaGranReto.cargarArchivo1(rutaArchivo);
 		boolean encontroFecha=false;
 		for (int i = 0; i < datosArchivo.length(); i++) {
@@ -47,6 +52,45 @@ public class ValidacionArchivo {
 		return fechas;
 	}
 	
+	public void obtenerFechaInicialFinal(String rutaArchivo, List<String> fechas) {
+		try {
+			obtenerDatosFecha(rutaArchivo, fechas);
+			for (int i = 0; i < fechas.size(); i++) {
+				String a=fechas.get(i);
+				String b=fechas.get(i+1);
+				
+				if(a.codePointAt(i)==47); //corresponde a /
+				
+				//fechas.get(i).compareTo(fechas.get(i+1));
+				i++;
+			}
+		} catch (GranRetoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void guardarCambiosArchivos(String rutaArchivo) {
+		File archivo = new File(rutaArchivo);
+		BufferedReader br;
+		
+		
+			try {
+				if(archivo.exists()) {
+				br = new BufferedReader(new FileReader(rutaArchivo));
+				System.out.println("El archivo ya fue creado anteriormente");
+				}
+				else {
+					br = new BufferedReader(new FileReader(archivo));
+					System.out.println("El archivo es nuevo y no había sido "
+							+ "creado antes");
+				}
+			} catch (IOException e) {
+				errores.add("Se presento un error al cargar el archivo");
+			}
+			
+		}
 	
 	
 	public static List<String> guardarDatosNombreProducto(String rutaArchivo, String nombreProducto, List<String> nombres) throws GranRetoException {
@@ -102,11 +146,14 @@ public class ValidacionArchivo {
 	
 	public static void main(String[] args) {
 		FachadaGranReto ifg = new FachadaGranReto();
-		List <String> nombreProductos=new ArrayList();
-		//String rutaArchivo=ifg.cargarArchivo1("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
+		List <String> fechas=new ArrayList();
 		
+		
+		fechas.add("2010/05/25 20:05");
+		fechas.add("2011/08/30 16:03");
 		try {
-		//	obtenerDatosFecha(rutaArchivo, fechaHora, fechas);
+			String rutaArchivo=ifg.cargarArchivo1("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
+			obtenerDatosFecha(rutaArchivo, fechas);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

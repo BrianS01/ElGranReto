@@ -20,6 +20,8 @@ public class FachadaGranReto implements IFachadaGranReto{
 			FileReader fr= new FileReader(rutaArchivo);
 			BufferedReader br=new BufferedReader(fr);
 
+			
+			
 			validacionArchivo = new ValidacionArchivo(br);	
 	    	validacionArchivo.ejecutarValidaciones();
 	    	validacionArchivo.obtenerResultadoValidacion();
