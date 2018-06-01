@@ -122,15 +122,19 @@ public class ValidacionArchivo
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		FachadaGranReto ifg = new FachadaGranReto();
 		List <String> nombreProductos=new ArrayList();
 		//String rutaArchivo=ifg.cargarArchivo1("C:\\Users\\cristian\\eclipse-workspace\\GranReto\\direccion.txt");
 		
-		try {
+		try
+		{
 		//	obtenerDatosFecha(rutaArchivo, fechaHora, fechas);
 			
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			// TODO Auto-generated catch block
 			System.out.println("Algo salio mal");
 		}
