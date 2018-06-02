@@ -4,8 +4,6 @@ import java.util.Date;
 
 public class Producto implements Comparable<Producto>
 {
-
-
 	private Date fecha;
 	private String nombreProducto;
 	private String cantidad;
