@@ -76,7 +76,9 @@ public class FachadaGranReto implements IFachadaGranReto
 		return articulosMasVendidos;
 	}
 
-	public List<String> obtenerHistorialVentaArticulo(String articulo) throws GranRetoException {
+	
+	public List<String> obtenerHistorialVentaArticulo(String articulo) throws GranRetoException
+	{
 		List<Producto> productos = validacionArchivo.getListaDeProductos();		
 		FachadaGranReto.TIPO_ORDEN = "xfecha";
 		Collections.sort(productos);
