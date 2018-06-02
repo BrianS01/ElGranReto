@@ -29,7 +29,9 @@ public class FachadaGranReto implements IFachadaGranReto{
 			validacionArchivo = new ValidacionArchivo(br);	
 	    	validacionArchivo.ejecutarValidaciones();
 	    	validacionArchivo.obtenerResultadoValidacion();
-		} catch (IOException ex) {
+		}
+		catch (IOException ex)
+		{
 			throw new GranRetoException("Se presento un error cargando el archivo");
 		} catch (ParseException e) {
 			throw new GranRetoException("error al convertir la fecha");
