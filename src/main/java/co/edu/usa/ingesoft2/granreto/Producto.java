@@ -2,7 +2,8 @@ package co.edu.usa.ingesoft2.granreto;
 
 import java.util.Date;
 
-public class Producto implements Comparable<Producto>{
+public class Producto implements Comparable<Producto>
+{
 
 
 	private Date fecha;
