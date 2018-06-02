@@ -39,10 +39,10 @@ public class FachadaGranReto implements IFachadaGranReto
 			throw new GranRetoException("error al convertir la fecha");
 		}	
 	}
-
 	
-
-	public List<String> obtenerArticulosMasVendidos(String fechaInicial, String fechaFinal) throws GranRetoException {		
+	
+	public List<String> obtenerArticulosMasVendidos(String fechaInicial, String fechaFinal) throws GranRetoException
+	{		
 		int cantidadArticulos = 0;
 		List<String> articulosMasVendidos = new ArrayList<String>();
 		List<Producto> productos = validacionArchivo.getListaDeProductos();
