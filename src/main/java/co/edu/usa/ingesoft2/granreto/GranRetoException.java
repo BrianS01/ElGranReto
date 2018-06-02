@@ -22,7 +22,7 @@ public class GranRetoException extends Exception
         super( message );
     }
 
-    public GranRetoException( Throwable cause )
+    public GranRetoException(Throwable cause)
     {
         super( cause );
     }
