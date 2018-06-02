@@ -15,7 +15,8 @@ public class GranRetoException extends Exception
     {
     }
 
-    public GranRetoException( String message ) {
+    public GranRetoException( String message )
+    {
         super( message );
     }
 
