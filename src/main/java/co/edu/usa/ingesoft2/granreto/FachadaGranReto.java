@@ -20,14 +20,12 @@ public class FachadaGranReto implements IFachadaGranReto{
     {
     }
 	
-	public void cargarArchivo(String rutaArchivo) throws GranRetoException {
-		try {
-			
+	public void cargarArchivo(String rutaArchivo) throws GranRetoException
+	{
+		try
+		{
 			FileReader fr= new FileReader(rutaArchivo);
 			BufferedReader br=new BufferedReader(fr);
-
-			
-			
 			validacionArchivo = new ValidacionArchivo(br);	
 	    	validacionArchivo.ejecutarValidaciones();
 	    	validacionArchivo.obtenerResultadoValidacion();
