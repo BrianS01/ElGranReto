@@ -82,10 +82,11 @@ public class FachadaGranReto implements IFachadaGranReto
 		List<Producto> productos = validacionArchivo.getListaDeProductos();		
 		FachadaGranReto.TIPO_ORDEN = "xfecha";
 		Collections.sort(productos);
-		
 		List<String> historialVentas = new ArrayList<String>();
 		String nombreArticulo = validacionArchivo.normalizarNombreProducto(articulo);
-		try {
+		
+		try
+		{
 			for (Producto producto : productos ) {
 				if(nombreArticulo.equals(validacionArchivo.normalizarNombreProducto(producto.getNombreProducto()))) {
 					historialVentas.add(validacionArchivo.pasarDate_A_String(producto.getFecha()).concat(":@:").concat(producto.getCantidad()));
