@@ -87,8 +87,10 @@ public class FachadaGranReto implements IFachadaGranReto
 		
 		try
 		{
-			for (Producto producto : productos ) {
-				if(nombreArticulo.equals(validacionArchivo.normalizarNombreProducto(producto.getNombreProducto()))) {
+			for (Producto producto : productos)
+			{
+				if(nombreArticulo.equals(validacionArchivo.normalizarNombreProducto(producto.getNombreProducto())))
+				{
 					historialVentas.add(validacionArchivo.pasarDate_A_String(producto.getFecha()).concat(":@:").concat(producto.getCantidad()));
 				}
 			}
