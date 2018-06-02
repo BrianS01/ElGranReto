@@ -1,6 +1,3 @@
-/**
- * 
- */
 package co.edu.usa.ingesoft2.granreto;
 
 import java.util.List;
