@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ValidacionArchivo {
+public class ValidacionArchivo
+{
 
 
 	private BufferedReader br;
