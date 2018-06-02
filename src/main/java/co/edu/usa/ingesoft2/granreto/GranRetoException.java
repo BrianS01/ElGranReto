@@ -11,8 +11,8 @@ public class GranRetoException extends Exception
 {
     private static final long serialVersionUID = -3505877527029106577L;
 
-    public GranRetoException() {
-
+    public GranRetoException()
+    {
     }
 
     public GranRetoException( String message ) {
