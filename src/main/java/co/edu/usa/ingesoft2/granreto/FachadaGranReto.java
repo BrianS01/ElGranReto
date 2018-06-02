@@ -59,7 +59,7 @@ public class FachadaGranReto implements IFachadaGranReto
 			Date fechaInicio=validacionArchivo.pasarString_A_Date(fechaInicial);
 			Date fechaFin=validacionArchivo.pasarString_A_Date(fechaFinal);
 			
-			for (Producto producto : productos )
+			for (Producto producto : productos)
 			{
 				if(cantidadArticulos<10 && !(producto.getFecha().before(fechaInicio)) && !(producto.getFecha().after(fechaFin)))
 				{
@@ -72,6 +72,7 @@ public class FachadaGranReto implements IFachadaGranReto
 		{
 			throw new GranRetoException("Se presento un error al buscar articulos mas vendidos");
 		}
+		
 		return articulosMasVendidos;
 	}
 
