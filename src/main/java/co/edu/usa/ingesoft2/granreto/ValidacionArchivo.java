@@ -12,8 +12,6 @@ import java.util.List;
 
 public class ValidacionArchivo
 {
-
-
 	private BufferedReader br;
 	private List<String> errores;
 	private int tipoDeLinea;
