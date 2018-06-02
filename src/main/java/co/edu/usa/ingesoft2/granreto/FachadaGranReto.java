@@ -99,7 +99,9 @@ public class FachadaGranReto implements IFachadaGranReto
 			{
 				throw new GranRetoException("No existe historial de ventas");
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			throw new GranRetoException();
 		}
 		FachadaGranReto.TIPO_ORDEN = "";
