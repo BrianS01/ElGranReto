@@ -34,8 +34,10 @@ public class Producto implements Comparable<Producto>
 	{
 		return fecha;
 	}
+	
 
-	public void setFecha(Date fecha) {
+	public void setFecha(Date fecha)
+	{
 		this.fecha = fecha;
 	}
 
