@@ -60,7 +60,8 @@ public class Producto implements Comparable<Producto>
 	}
 	
 
-	public void setCantidad(String linea) {
+	public void setCantidad(String linea)
+	{
 		this.cantidad = linea;
 	}	
 }
