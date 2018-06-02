@@ -20,7 +20,8 @@ public class Producto implements Comparable<Producto>
 		if(FachadaGranReto.TIPO_ORDEN.equals("xfecha"))
 		{
 			resultado = fecha.compareTo(producto.fecha);
-		}else {
+		}
+		else {
 			resultado = cantidad.compareTo(producto.cantidad);
 		}
 		
