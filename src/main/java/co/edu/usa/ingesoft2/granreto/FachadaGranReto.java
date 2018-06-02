@@ -104,9 +104,8 @@ public class FachadaGranReto implements IFachadaGranReto
 		{
 			throw new GranRetoException();
 		}
+		
 		FachadaGranReto.TIPO_ORDEN = "";
-
 		return historialVentas;
 	}
-
 }
