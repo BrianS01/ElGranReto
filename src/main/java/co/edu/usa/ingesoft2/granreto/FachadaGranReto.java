@@ -33,7 +33,8 @@ public class FachadaGranReto implements IFachadaGranReto{
 		catch (IOException ex)
 		{
 			throw new GranRetoException("Se presento un error cargando el archivo");
-		} catch (ParseException e) {
+		}
+		catch (ParseException e) {
 			throw new GranRetoException("error al convertir la fecha");
 		}	
 		
