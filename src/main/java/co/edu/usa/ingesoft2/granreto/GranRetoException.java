@@ -19,17 +19,17 @@ public class GranRetoException extends Exception
 
     public GranRetoException(String message)
     {
-        super( message );
+        super(message);
     }
 
     public GranRetoException(Throwable cause)
     {
-        super( cause );
+        super(cause);
     }
 
     public GranRetoException(String message, Throwable cause)
     {
-        super( message, cause );
+        super(message, cause);
     }
 
     public GranRetoException( String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace ) {
