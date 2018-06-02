@@ -51,9 +51,11 @@ public class FachadaGranReto implements IFachadaGranReto
 		{
 			throw new GranRetoException();
 		}
+		
 		Collections.sort(productos,Collections.reverseOrder());
 		
-		try {
+		try
+		{
 			Date fechaInicio=validacionArchivo.pasarString_A_Date(fechaInicial);
 			Date fechaFin=validacionArchivo.pasarString_A_Date(fechaFinal);
 			for (Producto producto : productos ) {
