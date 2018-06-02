@@ -42,7 +42,8 @@ public class Producto implements Comparable<Producto>
 	}
 	
 
-	public String getNombreProducto() {
+	public String getNombreProducto()
+	{
 		return nombreProducto;
 	}
 
