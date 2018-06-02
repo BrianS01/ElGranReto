@@ -32,7 +32,8 @@ public class GranRetoException extends Exception
         super(message, cause);
     }
 
-    public GranRetoException( String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace ) {
+    public GranRetoException( String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace )
+    {
         super( message, cause, enableSuppression, writableStackTrace );
     }
 
