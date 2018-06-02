@@ -15,10 +15,10 @@ public class Producto implements Comparable<Producto>
 	
 	public int compareTo(Producto producto)
 	{		
-	
 		int resultado;
 		
-		if(FachadaGranReto.TIPO_ORDEN.equals("xfecha")) {
+		if(FachadaGranReto.TIPO_ORDEN.equals("xfecha"))
+		{
 			resultado = fecha.compareTo(producto.fecha);
 		}else {
 			resultado = cantidad.compareTo(producto.cantidad);
