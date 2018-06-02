@@ -21,7 +21,8 @@ public class Producto implements Comparable<Producto>
 		{
 			resultado = fecha.compareTo(producto.fecha);
 		}
-		else {
+		else
+		{
 			resultado = cantidad.compareTo(producto.cantidad);
 		}
 		
