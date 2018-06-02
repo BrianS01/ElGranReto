@@ -94,7 +94,9 @@ public class FachadaGranReto implements IFachadaGranReto
 					historialVentas.add(validacionArchivo.pasarDate_A_String(producto.getFecha()).concat(":@:").concat(producto.getCantidad()));
 				}
 			}
-			if(historialVentas.size()==0) {
+			
+			if(historialVentas.size()==0)
+			{
 				throw new GranRetoException("No existe historial de ventas");
 			}
 		} catch (Exception e) {
