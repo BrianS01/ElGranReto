@@ -30,7 +30,8 @@ public class Producto implements Comparable<Producto>
 	}
 
 	
-	public Date getFecha() {
+	public Date getFecha()
+	{
 		return fecha;
 	}
 
