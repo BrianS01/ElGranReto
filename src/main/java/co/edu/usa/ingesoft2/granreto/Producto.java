@@ -40,6 +40,7 @@ public class Producto implements Comparable<Producto>
 	{
 		this.fecha = fecha;
 	}
+	
 
 	public String getNombreProducto() {
 		return nombreProducto;
