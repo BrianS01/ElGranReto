@@ -61,12 +61,12 @@ public class FachadaGranReto implements IFachadaGranReto
 			
 			for (Producto producto : productos )
 			{
-				if(cantidadArticulos<10 && !(producto.getFecha().before(fechaInicio)) && !(producto.getFecha().after(fechaFin))) {
+				if(cantidadArticulos<10 && !(producto.getFecha().before(fechaInicio)) && !(producto.getFecha().after(fechaFin)))
+				{
 					articulosMasVendidos.add(validacionArchivo.normalizarNombreProducto(producto.getNombreProducto()).concat(":@:").concat(producto.getCantidad()));
 					cantidadArticulos++;
 				}
 			}
-			
 		} catch (Exception e) {
 			throw new GranRetoException("Se presento un error al buscar articulos mas vendidos");
 		}
