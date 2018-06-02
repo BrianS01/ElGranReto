@@ -46,6 +46,7 @@ public class Producto implements Comparable<Producto>
 	{
 		return nombreProducto;
 	}
+	
 
 	public void setNombreProducto(String nombreProducto)
 	{
