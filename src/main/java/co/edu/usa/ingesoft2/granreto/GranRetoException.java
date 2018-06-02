@@ -27,7 +27,8 @@ public class GranRetoException extends Exception
         super( cause );
     }
 
-    public GranRetoException( String message, Throwable cause ) {
+    public GranRetoException( String message, Throwable cause )
+    {
         super( message, cause );
     }
 
