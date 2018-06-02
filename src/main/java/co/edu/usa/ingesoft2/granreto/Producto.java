@@ -8,8 +8,8 @@ public class Producto implements Comparable<Producto>
 	private String nombreProducto;
 	private String cantidad;
 	
-	public Producto() {
-		
+	public Producto()
+	{
 	}
 	
 	
