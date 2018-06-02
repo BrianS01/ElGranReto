@@ -16,7 +16,8 @@ public class FachadaGranReto implements IFachadaGranReto{
 	ValidacionArchivo validacionArchivo;
     public static String TIPO_ORDEN;
     
-    public FachadaGranReto() {
+    public FachadaGranReto()
+    {
     }
 	
 	public void cargarArchivo(String rutaArchivo) throws GranRetoException {
