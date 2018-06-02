@@ -46,7 +46,9 @@ public class FachadaGranReto implements IFachadaGranReto
 		int cantidadArticulos = 0;
 		List<String> articulosMasVendidos = new ArrayList<String>();
 		List<Producto> productos = validacionArchivo.getListaDeProductos();
-		if(productos==null || productos.size()==0) {
+		
+		if(productos==null || productos.size()==0)
+		{
 			throw new GranRetoException();
 		}
 		Collections.sort(productos,Collections.reverseOrder());
