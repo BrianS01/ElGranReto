@@ -36,5 +36,4 @@ public class GranRetoException extends Exception
     {
         super( message, cause, enableSuppression, writableStackTrace );
     }
-
 }
