@@ -53,7 +53,8 @@ public class Producto implements Comparable<Producto>
 		this.nombreProducto = nombreProducto;
 	}
 
-	public String getCantidad() {
+	public String getCantidad()
+	{
 		return cantidad;
 	}
 
