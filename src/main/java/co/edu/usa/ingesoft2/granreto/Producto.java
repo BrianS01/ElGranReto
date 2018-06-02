@@ -13,7 +13,8 @@ public class Producto implements Comparable<Producto>
 	}
 	
 	
-	public int compareTo(Producto producto) {		
+	public int compareTo(Producto producto)
+	{		
 	
 		int resultado;
 		
