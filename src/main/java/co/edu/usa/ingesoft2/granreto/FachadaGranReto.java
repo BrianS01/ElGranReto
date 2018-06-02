@@ -67,7 +67,9 @@ public class FachadaGranReto implements IFachadaGranReto
 					cantidadArticulos++;
 				}
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			throw new GranRetoException("Se presento un error al buscar articulos mas vendidos");
 		}
 		return articulosMasVendidos;
