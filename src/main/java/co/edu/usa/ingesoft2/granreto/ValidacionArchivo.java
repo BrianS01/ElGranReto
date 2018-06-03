@@ -26,7 +26,8 @@ public class ValidacionArchivo
 	}
 
 	
-	public List<Producto> getListaDeProductos(){
+	public List<Producto> getListaDeProductos()
+	{
 		return productos;
 	}
 	
