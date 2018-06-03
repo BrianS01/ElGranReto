@@ -44,7 +44,7 @@ public class ValidacionArchivo
 		File archivo = new File(rutaArchivo);
 		BufferedReader br;
 		
-			try
+		try
 			{
 				if(archivo.exists()) {
 				br = new BufferedReader(new FileReader(rutaArchivo));
