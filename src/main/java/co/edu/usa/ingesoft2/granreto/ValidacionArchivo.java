@@ -18,6 +18,7 @@ public class ValidacionArchivo
     FachadaGranReto fachadaGranReto=new FachadaGranReto();
 	private List<Producto> productos;
 	
+	
 	public ValidacionArchivo(BufferedReader br)
 	{
 		this.br = br;
