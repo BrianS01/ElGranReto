@@ -50,7 +50,7 @@ public class ValidacionArchivo
 			{
 				br = new BufferedReader(new FileReader(rutaArchivo));
 				System.out.println("El archivo ya fue creado anteriormente");
-				}
+			}
 				else {
 					br = new BufferedReader(new FileReader(archivo));
 				}
