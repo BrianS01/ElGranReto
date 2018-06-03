@@ -53,7 +53,7 @@ public class ValidacionArchivo
 			}
 			else
 			{
-					br = new BufferedReader(new FileReader(archivo));
+				br = new BufferedReader(new FileReader(archivo));
 				}
 			} catch (IOException e) {
 				errores.add("Se presento un error al cargar el archivo");
