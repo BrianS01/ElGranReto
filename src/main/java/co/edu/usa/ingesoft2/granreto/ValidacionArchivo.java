@@ -32,7 +32,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public String obtenerRutaArhivo(String rutaArchivo) {
+	public String obtenerRutaArhivo(String rutaArchivo)
+	{
 		return rutaArchivo;
 	}
 	
