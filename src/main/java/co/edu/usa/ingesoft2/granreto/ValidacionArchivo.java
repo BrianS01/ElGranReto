@@ -39,7 +39,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public void guardarCambiosArchivos(String rutaArchivo) {
+	public void guardarCambiosArchivos(String rutaArchivo)
+	{
 		File archivo = new File(rutaArchivo);
 		BufferedReader br;
 		
