@@ -46,7 +46,7 @@ public class ValidacionArchivo
 		
 		try
 		{
-				if(archivo.exists()) {
+			if(archivo.exists()) {
 				br = new BufferedReader(new FileReader(rutaArchivo));
 				System.out.println("El archivo ya fue creado anteriormente");
 				}
