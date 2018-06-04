@@ -70,7 +70,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public void ejecutarValidaciones() throws ParseException, GranRetoException {
+	public void ejecutarValidaciones() throws ParseException, GranRetoException
+	{
 		try {
 			validarArchivoVacio(br.ready());
 			recorrerArchivo();
