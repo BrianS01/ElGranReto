@@ -127,6 +127,7 @@ public class ValidacionArchivo
 	public String obtenerResultadoValidacion() throws GranRetoException
 	{
 		String mensaje = "\n";
+		
 		if (errores.size() == 0)
 		{
 			mensaje = "No se presentaron errores";
