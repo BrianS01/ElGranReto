@@ -108,7 +108,8 @@ public class ValidacionArchivo
 
 	public void validarFecha(String fechaHora)
 	{
-		try {
+		try
+		{
 			// Validar enteros fecha.
 			SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 			formato.setLenient(false);
