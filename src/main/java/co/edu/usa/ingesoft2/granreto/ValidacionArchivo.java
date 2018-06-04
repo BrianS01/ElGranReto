@@ -104,6 +104,7 @@ public class ValidacionArchivo
 			errores.add("Cantidad de espacios internos de la fecha " + fechaHora + " son incorrectos");
 		}
 	}
+	
 
 	public void validarFecha(String fechaHora) {
 		try {
