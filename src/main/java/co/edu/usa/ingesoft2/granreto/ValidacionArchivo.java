@@ -83,6 +83,7 @@ public class ValidacionArchivo
 		}
 	}
 
+	
 	public void validarArchivoVacio(boolean estaLleno) {
 
 		if (!estaLleno) {
