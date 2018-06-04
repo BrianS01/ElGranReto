@@ -93,6 +93,7 @@ public class ValidacionArchivo
 
 	}
 	
+	
 	public void validarSoloUnEspacioFechaHora(String fechaHora) {
 		String[] elementos = fechaHora.trim().split(" ");
 		int cantidadElementos = elementos.length;
