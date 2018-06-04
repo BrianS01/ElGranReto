@@ -63,7 +63,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public String validarNombreProducto(String nombreProducto) throws GranRetoException {
+	public String validarNombreProducto(String nombreProducto) throws GranRetoException
+	{
 		validarCaracteresNombreProducto(nombreProducto);		
 		return nombreProducto;
 	}
