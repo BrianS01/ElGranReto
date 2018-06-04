@@ -60,7 +60,7 @@ public class ValidacionArchivo
 		{
 			errores.add("Se presento un error al cargar el archivo");
 		}	
-		}
+	}
 	
 	
 	public String validarNombreProducto(String nombreProducto) throws GranRetoException {
