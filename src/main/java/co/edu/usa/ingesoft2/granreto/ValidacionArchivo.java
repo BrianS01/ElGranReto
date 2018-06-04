@@ -77,7 +77,8 @@ public class ValidacionArchivo
 			validarArchivoVacio(br.ready());
 			recorrerArchivo();
 		}
-		catch (IOException e) {
+		catch (IOException e)
+		{
 			errores.add("Se presento un error al cargar el archivo");
 		}
 	}
