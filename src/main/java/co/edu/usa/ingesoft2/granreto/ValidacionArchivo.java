@@ -173,7 +173,8 @@ public class ValidacionArchivo
 		while ((linea = br.readLine()) != null)
 		{
 			tipoLinea = validarTipoDeEntrada(linea);
-			switch (tipoLinea) {
+			switch (tipoLinea)
+			{
 			case 1:
 				validacionesFecha(linea);
 				producto.setFecha(pasarString_A_Date(linea));
