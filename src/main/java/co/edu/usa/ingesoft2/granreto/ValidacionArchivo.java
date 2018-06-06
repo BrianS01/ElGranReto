@@ -177,7 +177,7 @@ public class ValidacionArchivo
 			{
 				case 1:
 					validacionesFecha(linea);
-				producto.setFecha(pasarString_A_Date(linea));
+					producto.setFecha(pasarString_A_Date(linea));
 				break;
 			case 2:
 				validacionesNombreProducto(linea);
