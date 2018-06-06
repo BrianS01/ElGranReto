@@ -169,6 +169,7 @@ public class ValidacionArchivo
 		Producto producto=new Producto();
 		String linea = "";
 		int tipoLinea = 0;
+		
 		while ((linea = br.readLine()) != null) {
 			tipoLinea = validarTipoDeEntrada(linea);
 			switch (tipoLinea) {
