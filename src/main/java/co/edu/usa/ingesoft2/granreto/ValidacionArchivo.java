@@ -181,7 +181,7 @@ public class ValidacionArchivo
 				break;
 				case 2:
 					validacionesNombreProducto(linea);
-				producto.setNombreProducto(linea);//al producto le asigno el nombre del producto
+					producto.setNombreProducto(linea);//al producto le asigno el nombre del producto
 				break;
 			case 3:
 				validacionesCantidad(linea);
