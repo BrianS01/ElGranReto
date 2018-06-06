@@ -180,7 +180,7 @@ public class ValidacionArchivo
 					producto.setFecha(pasarString_A_Date(linea));
 				break;
 				case 2:
-				validacionesNombreProducto(linea);
+					validacionesNombreProducto(linea);
 				producto.setNombreProducto(linea);//al producto le asigno el nombre del producto
 				break;
 			case 3:
