@@ -132,7 +132,8 @@ public class ValidacionArchivo
 		{
 			mensaje = "No se presentaron errores";
 		}
-		else {
+		else
+		{
 			for (String error : errores) {
 				mensaje += error + "\n";
 			}
