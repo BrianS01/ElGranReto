@@ -143,6 +143,7 @@ public class ValidacionArchivo
 		
 		return mensaje;
 	}
+	
 
 	public String normalizarNombreProducto(String nombreProducto) {
 		String nombreNormalizado = nombreProducto.trim().toUpperCase();
