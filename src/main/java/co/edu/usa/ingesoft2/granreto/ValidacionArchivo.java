@@ -134,7 +134,8 @@ public class ValidacionArchivo
 		}
 		else
 		{
-			for (String error : errores) {
+			for (String error : errores)
+			{
 				mensaje += error + "\n";
 			}
 			throw new GranRetoException(mensaje);
