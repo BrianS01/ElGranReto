@@ -152,7 +152,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public void SinDobleEspaciosNombreProducto(String nombreProducto) throws GranRetoException {
+	public void SinDobleEspaciosNombreProducto(String nombreProducto) throws GranRetoException
+	{
 		String nombreNormalizado =normalizarNombreProducto(nombreProducto);
 		if(nombreNormalizado.contains("  ")){
 			throw new GranRetoException();
