@@ -145,7 +145,8 @@ public class ValidacionArchivo
 	}
 	
 
-	public String normalizarNombreProducto(String nombreProducto) {
+	public String normalizarNombreProducto(String nombreProducto)
+	{
 		String nombreNormalizado = nombreProducto.trim().toUpperCase();
 		return nombreNormalizado;
 	}
