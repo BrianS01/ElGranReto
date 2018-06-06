@@ -131,7 +131,8 @@ public class ValidacionArchivo
 		if (errores.size() == 0)
 		{
 			mensaje = "No se presentaron errores";
-		} else {
+		}
+		else {
 			for (String error : errores) {
 				mensaje += error + "\n";
 			}
