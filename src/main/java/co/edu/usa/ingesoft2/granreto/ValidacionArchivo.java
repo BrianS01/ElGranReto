@@ -156,7 +156,8 @@ public class ValidacionArchivo
 	{
 		String nombreNormalizado =normalizarNombreProducto(nombreProducto);
 		
-		if(nombreNormalizado.contains("  ")){
+		if(nombreNormalizado.contains("  "))
+		{
 			throw new GranRetoException();
 		}
 	}
