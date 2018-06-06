@@ -175,7 +175,7 @@ public class ValidacionArchivo
 			tipoLinea = validarTipoDeEntrada(linea);
 			switch (tipoLinea)
 			{
-			case 1:
+				case 1:
 				validacionesFecha(linea);
 				producto.setFecha(pasarString_A_Date(linea));
 				break;
