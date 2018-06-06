@@ -163,7 +163,7 @@ public class ValidacionArchivo
 	}
 	
 	
-//Filtrar los productos cuya fecha este entre los rangos que estén entre dos fechas. 
+	//Filtrar los productos cuya fecha este entre los rangos que estén entre dos fechas. 
 	public void recorrerArchivo() throws IOException, ParseException, GranRetoException {
 		Producto producto=new Producto();
 		String linea = "";
