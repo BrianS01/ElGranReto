@@ -170,7 +170,8 @@ public class ValidacionArchivo
 		String linea = "";
 		int tipoLinea = 0;
 		
-		while ((linea = br.readLine()) != null) {
+		while ((linea = br.readLine()) != null)
+		{
 			tipoLinea = validarTipoDeEntrada(linea);
 			switch (tipoLinea) {
 			case 1:
