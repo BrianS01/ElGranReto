@@ -221,7 +221,8 @@ public class ValidacionArchivo
 		 validarRangoCantidad(linea);
 	}
 	
-	public String validacionesCantidad1(String linea) {
+	public String validacionesCantidad1(String linea)
+	{
 		 validarFormatoCantidad(linea);
 		 validarRangoCantidad(linea);
 		 return linea;
