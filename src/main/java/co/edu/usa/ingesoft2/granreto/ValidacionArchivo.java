@@ -215,7 +215,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public void validacionesCantidad(String linea) {
+	public void validacionesCantidad(String linea)
+	{
 		 validarFormatoCantidad(linea);
 		 validarRangoCantidad(linea);
 	}
