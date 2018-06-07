@@ -201,7 +201,8 @@ public class ValidacionArchivo
 	}
 	
 
-	public void validacionesFecha(String linea) {
+	public void validacionesFecha(String linea)
+	{
 		validarFecha(linea);
 		validarSoloUnEspacioFechaHora(linea);
 	}
