@@ -248,6 +248,7 @@ public class ValidacionArchivo
 		
 		return tipoDeLinea;
 	}
+	
 
 	public void validarFormatoCantidad(String linea) {
 		String[] elementos = linea.trim().split(",");
