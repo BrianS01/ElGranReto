@@ -206,6 +206,7 @@ public class ValidacionArchivo
 		validarFecha(linea);
 		validarSoloUnEspacioFechaHora(linea);
 	}
+	
 
 	public void validacionesNombreProducto(String linea) throws GranRetoException {
 		SinDobleEspaciosNombreProducto(linea);
