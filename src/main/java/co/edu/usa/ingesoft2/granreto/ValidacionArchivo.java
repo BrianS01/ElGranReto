@@ -241,7 +241,8 @@ public class ValidacionArchivo
 		{
 			tipoDeLinea++;
 		}
-		else {
+		else
+		{
 			return 4;
 		}
 		
