@@ -214,6 +214,7 @@ public class ValidacionArchivo
 		validarNombreProducto(linea);
 	}
 	
+	
 	public void validacionesCantidad(String linea) {
 		 validarFormatoCantidad(linea);
 		 validarRangoCantidad(linea);
