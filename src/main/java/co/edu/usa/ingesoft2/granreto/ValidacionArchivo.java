@@ -186,7 +186,8 @@ public class ValidacionArchivo
 				case 3:
 					validacionesCantidad(linea);
 					producto.setCantidad(linea);//al producto le agrego la cantidad
-				if(producto!=null && producto.getCantidad()!=null && producto.getFecha()!=null && producto.getNombreProducto()!=null) {
+				if(producto!=null && producto.getCantidad()!=null && producto.getFecha()!=null && producto.getNombreProducto()!=null)
+				{
 					productos.add(producto);
 				}
 				
