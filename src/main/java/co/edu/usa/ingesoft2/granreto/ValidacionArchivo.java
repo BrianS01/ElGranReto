@@ -194,7 +194,7 @@ public class ValidacionArchivo
 				
 					producto = new Producto();
 				break;
-			default:
+				default:
 				continue;
 			}
 		}
