@@ -240,7 +240,8 @@ public class ValidacionArchivo
 		if (linea.trim().length() != 0)
 		{
 			tipoDeLinea++;
-		}else {
+		}
+		else {
 			return 4;
 		}
 		
