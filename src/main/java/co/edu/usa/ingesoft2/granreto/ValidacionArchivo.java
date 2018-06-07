@@ -183,8 +183,8 @@ public class ValidacionArchivo
 					validacionesNombreProducto(linea);
 					producto.setNombreProducto(linea);//al producto le asigno el nombre del producto
 				break;
-			case 3:
-				validacionesCantidad(linea);
+				case 3:
+					validacionesCantidad(linea);
 				producto.setCantidad(linea);//al producto le agrego la cantidad
 				if(producto!=null && producto.getCantidad()!=null && producto.getFecha()!=null && producto.getNombreProducto()!=null) {
 					productos.add(producto);
