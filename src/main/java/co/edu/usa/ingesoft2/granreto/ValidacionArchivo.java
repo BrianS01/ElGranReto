@@ -232,7 +232,8 @@ public class ValidacionArchivo
 	
 	public int validarTipoDeEntrada(String linea)
 	{
-		if (tipoDeLinea == 3) {
+		if (tipoDeLinea == 3)
+		{
 			tipoDeLinea = 0;
 		}
 
