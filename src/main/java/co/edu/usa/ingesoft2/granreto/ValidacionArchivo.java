@@ -237,7 +237,8 @@ public class ValidacionArchivo
 			tipoDeLinea = 0;
 		}
 
-		if (linea.trim().length() != 0) {
+		if (linea.trim().length() != 0)
+		{
 			tipoDeLinea++;
 		}else {
 			return 4;
