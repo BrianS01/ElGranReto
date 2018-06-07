@@ -221,6 +221,7 @@ public class ValidacionArchivo
 		 validarRangoCantidad(linea);
 	}
 	
+	
 	public String validacionesCantidad1(String linea)
 	{
 		 validarFormatoCantidad(linea);
