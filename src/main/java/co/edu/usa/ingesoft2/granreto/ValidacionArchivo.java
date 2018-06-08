@@ -269,6 +269,8 @@ public class ValidacionArchivo
 			}
 		}
 	}
+	
+	
 	public void validarRangoCantidad(String linea) {
 		
 		
