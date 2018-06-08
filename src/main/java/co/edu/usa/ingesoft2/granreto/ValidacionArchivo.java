@@ -273,8 +273,6 @@ public class ValidacionArchivo
 	
 	public void validarRangoCantidad(String linea)
 	{
-		
-		
 		double cantidad=0;
 		try {
 		cantidad = Double.parseDouble(linea.trim().replace(",", "."));
