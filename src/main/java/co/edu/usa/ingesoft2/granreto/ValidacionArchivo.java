@@ -274,7 +274,8 @@ public class ValidacionArchivo
 	public void validarRangoCantidad(String linea)
 	{
 		double cantidad=0;
-		try {
+		
+		try{
 		cantidad = Double.parseDouble(linea.trim().replace(",", "."));
 		if(!(cantidad>0.0 && cantidad<=1000000.0)) {
 			errores.add("El rango debe ser mayor a 0,0 y menor o igual a 1000000,0 "
