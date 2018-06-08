@@ -262,6 +262,7 @@ public class ValidacionArchivo
 		for (int i = 0; i < linea.length(); i++)
 		{
 			int rangoCaracteres = linea.codePointAt(i);
+			
 			if(!((rangoCaracteres >= 48 && rangoCaracteres <= 57) ||rangoCaracteres ==44)) {
 				errores.add("la línea contiene carácteres especiales "+linea.trim());
 			}
