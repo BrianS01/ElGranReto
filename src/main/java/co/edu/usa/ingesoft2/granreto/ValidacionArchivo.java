@@ -284,7 +284,8 @@ public class ValidacionArchivo
 				errores.add("El rango debe ser mayor a 0,0 y menor o igual a 1000000,0 " + "y se ingreso "+linea.trim());
 			}
 		}
-		catch(Exception e) {
+		catch(Exception e)
+		{
 			errores.add("El formato de cantidad es incorrecto "+linea.trim());
 		}
 	}
