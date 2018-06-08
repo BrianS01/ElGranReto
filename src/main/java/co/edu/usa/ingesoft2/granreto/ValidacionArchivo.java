@@ -291,7 +291,6 @@ public class ValidacionArchivo
 	}
 	
 	
-  
 	// Estos nombres admiten letras, números, apóstrofes, guiones y paréntesis.
 	
 	
