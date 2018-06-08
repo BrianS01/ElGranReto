@@ -259,7 +259,8 @@ public class ValidacionArchivo
 			errores.add("La cantidad debe contener una coma unicamente "+linea.trim());
 		}
 
-		for (int i = 0; i < linea.length(); i++) {
+		for (int i = 0; i < linea.length(); i++)
+		{
 		int rangoCaracteres = linea.codePointAt(i);
 			if(!((rangoCaracteres >= 48 && rangoCaracteres <= 57) ||rangoCaracteres ==44)) {
 				errores.add("la línea contiene carácteres especiales "+linea.trim());
