@@ -253,6 +253,7 @@ public class ValidacionArchivo
 	public void validarFormatoCantidad(String linea)
 	{
 		String[] elementos = linea.trim().split(",");
+		
 		if(elementos.length!=2) {
 			errores.add("La cantidad debe contener una coma unicamente "+linea.trim());
 		}
