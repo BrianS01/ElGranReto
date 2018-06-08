@@ -254,7 +254,8 @@ public class ValidacionArchivo
 	{
 		String[] elementos = linea.trim().split(",");
 		
-		if(elementos.length!=2) {
+		if(elementos.length!=2)
+		{
 			errores.add("La cantidad debe contener una coma unicamente "+linea.trim());
 		}
 
