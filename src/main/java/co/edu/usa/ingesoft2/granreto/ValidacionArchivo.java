@@ -271,7 +271,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public void validarRangoCantidad(String linea) {
+	public void validarRangoCantidad(String linea)
+	{
 		
 		
 		double cantidad=0;
