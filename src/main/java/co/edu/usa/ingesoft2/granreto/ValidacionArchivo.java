@@ -339,6 +339,7 @@ public class ValidacionArchivo
 		return formato.parse(fechaHora);
 	}
 	
+	
 	public String pasarDate_A_String(Date fechaHora) throws ParseException {
 		String fecha="";
 		SimpleDateFormat anio = new SimpleDateFormat("yyyy");
