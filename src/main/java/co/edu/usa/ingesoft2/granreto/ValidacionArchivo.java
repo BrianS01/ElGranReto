@@ -311,7 +311,7 @@ public class ValidacionArchivo
 				rangoCaracteres = linea.codePointAt(i);
 				
 				if (!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
-						!(rangoCaracteres>=97 && rangoCaracteres<=122) &&
+					!(rangoCaracteres>=97 && rangoCaracteres<=122) &&
 						!(rangoCaracteres>=48 && rangoCaracteres<=57) && 
 						!(rangoCaracteres==45) &&
 						!(rangoCaracteres>=40 && rangoCaracteres<=41) &&
