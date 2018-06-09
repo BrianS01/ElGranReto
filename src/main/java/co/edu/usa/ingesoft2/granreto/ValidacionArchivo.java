@@ -340,7 +340,8 @@ public class ValidacionArchivo
 	}
 	
 	
-	public String pasarDate_A_String(Date fechaHora) throws ParseException {
+	public String pasarDate_A_String(Date fechaHora) throws ParseException
+	{
 		String fecha="";
 		SimpleDateFormat anio = new SimpleDateFormat("yyyy");
 		anio.setLenient(false);
