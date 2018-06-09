@@ -303,6 +303,7 @@ public class ValidacionArchivo
 	public void validarCaracteresNombreProducto(String linea) throws GranRetoException
 	{
 		int rangoCaracteres;
+		
 		try {
 			for (int i = 0; i < linea.length(); i++) {
 				rangoCaracteres = linea.codePointAt(i);
