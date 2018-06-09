@@ -354,5 +354,4 @@ public class ValidacionArchivo
 		fecha+=dia.format(fechaHora);
 		return fecha;
 	}
-	
 }
