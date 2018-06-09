@@ -324,7 +324,8 @@ public class ValidacionArchivo
 				}
 			}
 		}
-		catch (Exception e) {
+		catch (Exception e
+		{
 			errores.add("Nombre del producto incorrecto" + linea);
 			throw new GranRetoException();
 		}
