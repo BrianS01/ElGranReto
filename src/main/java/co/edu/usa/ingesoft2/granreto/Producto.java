@@ -1,3 +1,10 @@
+/*
+ *  GRAN RETO
+ *   co-Author ::: Cristina Espinosa
+ *   co-Author ::: Brian Sterling
+ *     Program ::: Ingenieria de Software II
+ *  Credential ::: SIST00076-G01:SIVII
+ */
 package co.edu.usa.ingesoft2.granreto;
 
 import java.util.Date;
