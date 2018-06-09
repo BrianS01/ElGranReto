@@ -319,8 +319,8 @@ public class ValidacionArchivo
 					!(rangoCaracteres==39))
 				{ 
 					throw new GranRetoException();
-				//	errores.add("el nombre del producto " + linea + " no esta escrito correctamente");
-				//	break;
+					//errores.add("el nombre del producto " + linea + " no esta escrito correctamente");
+					//break;
 				}
 			}
 
