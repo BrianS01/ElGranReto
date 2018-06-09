@@ -314,7 +314,7 @@ public class ValidacionArchivo
 					!(rangoCaracteres>=97 && rangoCaracteres<=122) &&
 					!(rangoCaracteres>=48 && rangoCaracteres<=57) && 
 					!(rangoCaracteres==45) &&
-						!(rangoCaracteres>=40 && rangoCaracteres<=41) &&
+					!(rangoCaracteres>=40 && rangoCaracteres<=41) &&
 						!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
 						!(rangoCaracteres==39) ) { 
 					throw new GranRetoException();
