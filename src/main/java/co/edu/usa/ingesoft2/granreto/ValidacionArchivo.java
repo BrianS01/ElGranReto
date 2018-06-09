@@ -316,7 +316,8 @@ public class ValidacionArchivo
 					!(rangoCaracteres==45) &&
 					!(rangoCaracteres>=40 && rangoCaracteres<=41) &&
 					!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
-					!(rangoCaracteres==39) ) { 
+					!(rangoCaracteres==39) )
+				{ 
 					throw new GranRetoException();
 				//	errores.add("el nombre del producto " + linea + " no esta escrito correctamente");
 				//	break;
