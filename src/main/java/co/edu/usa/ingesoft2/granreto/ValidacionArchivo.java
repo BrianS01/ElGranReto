@@ -331,7 +331,9 @@ public class ValidacionArchivo
 		}
 	}
 	
-	public Date pasarString_A_Date(String fechaHora) throws ParseException {
+	
+	public Date pasarString_A_Date(String fechaHora) throws ParseException
+	{
 		SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 		formato.setLenient(false);
 		return formato.parse(fechaHora);
