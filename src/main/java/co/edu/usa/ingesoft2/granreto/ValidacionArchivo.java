@@ -293,7 +293,8 @@ public class ValidacionArchivo
 	
 	//Estos nombres admiten letras, números, apóstrofes, guiones y paréntesis.
 	//Buscar el nombre del producto no puede divirdirse entre líneas.
-	public void separarCantidadProductoPorComas(String cantidadProducto) {
+	public void separarCantidadProductoPorComas(String cantidadProducto)
+	{
 		String[] elementos = cantidadProducto.trim().split(",");
 
 	}
