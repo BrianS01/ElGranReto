@@ -304,7 +304,8 @@ public class ValidacionArchivo
 	{
 		int rangoCaracteres;
 		
-		try {
+		try
+		{
 			for (int i = 0; i < linea.length(); i++) {
 				rangoCaracteres = linea.codePointAt(i);
 				
