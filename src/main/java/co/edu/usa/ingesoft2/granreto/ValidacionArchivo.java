@@ -300,8 +300,6 @@ public class ValidacionArchivo
 
 
 	// Estos nombres admiten letras, números, apóstrofes, guiones y paréntesis.
-	
-	
 	public void validarCaracteresNombreProducto(String linea) throws GranRetoException {
 		int rangoCaracteres;
 		try {
