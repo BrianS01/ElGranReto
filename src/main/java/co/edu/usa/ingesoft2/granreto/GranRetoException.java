@@ -1,6 +1,6 @@
 /*
  *  GRAN RETO
- *   co-Author ::: Cristina Espinosa
+ *   co-Author ::: Cristian Espinosa
  *   co-Author :::    Brian Sterling
  *     Program ::: Ingenieria de Software II
  *  Credential ::: SIST00076-G01:SIVII
