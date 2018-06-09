@@ -306,7 +306,8 @@ public class ValidacionArchivo
 		
 		try
 		{
-			for (int i = 0; i < linea.length(); i++) {
+			for (int i = 0; i < linea.length(); i++)
+			{
 				rangoCaracteres = linea.codePointAt(i);
 				
 				if (!(rangoCaracteres>=65 && rangoCaracteres<=90) &&
